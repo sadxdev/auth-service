@@ -41,7 +41,7 @@ public class AuthController {
 
         User user = userOptional.get();
 
-        // 🔐 Compare password
+        //  Compare password
         if (passwordEncoder.matches(loginRequest.getPassword(), user.getPassword())) {
             return "Login successful!";
         } else {
